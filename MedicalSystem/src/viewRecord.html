@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Patient Record View</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <h2>Patient Record Details</h2>
+                <div class="patient-details">
+                    <h4>Patient Name: <span id="patientName"></span></h4>
+                    <p>Admission Number: <span id="admissionNo"></span></p>
+                    <p>Hospital: <span id="hospital"></span></p>
+                    <p>Doctor: <span id="doctor"></span></p>
+                    <p>Prescription: <span id="prescription"></span></p>
+                </div>
+                <button class="btn btn-primary" onclick="window.location.href='index.html'">Back to Form</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Retrieve and display the patient data when the page loads
+        window.onload = function() {
+            const patientData = JSON.parse(localStorage.getItem('patientData'));
+            if (patientData) {
+                document.getElementById('patientName').textContent = patientData.patientName;
+                document.getElementById('admissionNo').textContent = patientData.admissionNo;
+                document.getElementById('hospital').textContent = patientData.hospitalName;
+                document.getElementById('doctor').textContent = patientData.doctorName;
+                document.getElementById('prescription').textContent = patientData.prescription;
+            }
+        };
+    </script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+</html>

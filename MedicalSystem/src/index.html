@@ -9,12 +9,14 @@
 
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   </head>
   <body>
     <div class="container">
-      <div class="row">
-        <img src="images/MedicalBanner.jpg" />
+      <div class="header">
+        <h1>Patient Records System</h1>
       </div>
       
 
@@ -59,9 +61,10 @@
             </div>
             <br/>
           </div>
-        <div class="input-group-btn">
-          <button type="button" name="button" data-loading-text="<i class='fa fa-spinner fa-spin '></i> Processing Patient" class="btn btn-default btn-value">Add Record</button>
-        </div>  
+          <div class="input-group-btn">
+            <button type="button" name="button" data-loading-text="<i class='fa fa-spinner fa-spin '></i> Processing Patient" 
+              class="btn btn-default btn-value" onclick="submitAndRedirect()">Add Record</button>
+          </div>    
         </div>
       </div>
 
@@ -111,7 +114,26 @@
       <hr/>
       <br/>
     </div>
+    <script>function submitAndRedirect() {
+      // Get all input values
+      const admissionNo = document.querySelector('.input-value1').value;
+      const patientName = document.querySelector('.input-value2').value;
+      const hospitalName = document.querySelector('.input-value3').value;
+      const doctorName = document.querySelector('.input-value4').value;
+      const prescription = document.querySelector('.input-value5').value;
 
+      // Store data in localStorage to access it on the next page
+      localStorage.setItem('patientData', JSON.stringify({
+        admissionNo,
+        patientName,
+        hospitalName,
+        doctorName,
+        prescription
+      }));
+
+      // Redirect to the view page
+      window.location.href = 'viewRecord.html';
+    }</script>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->

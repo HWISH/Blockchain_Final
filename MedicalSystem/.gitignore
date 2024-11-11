@@ -31,3 +31,16 @@ yarn-error.log*
 # Coverage directory used by tools like istanbul
 coverage
 coverage.json
+// ... existing entries ...
+
+# Blockchain specific
+.secret
+/artifacts
+.openzeppelin
+*.abi
+*.bin
+
+# Test blockchain data
+/chaindata
+/geth
+/keystore

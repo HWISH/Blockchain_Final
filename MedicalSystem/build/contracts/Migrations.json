@@ -1478,10 +1478,23 @@
       "links": {},
       "address": "0x582A8619d332f3b233B7CBAC545fFe434347CDF9",
       "transactionHash": "0xbb12325e8623f2bd8a283de4d919cb6fe30721513923b888d867dfd571bc0a62"
+    },
+    "1731368138492": {
+      "events": {},
+      "links": {},
+      "address": "0x23DD24eBa76c70c8bfEda7941d1CBc3B5887f663",
+      "transactionHash": "0x130cf584d4c5d12977312685bc445afbcb239f423d20ad521bb945af53c947d2"
+    },
+    "1731368763529": {
+      "events": {},
+      "links": {},
+      "address": "0x33f8dCc1bE942bD43954f75126731D6AE3Ef5c53",
+      "transactionHash": "0xb8183cb0c87c05f6ecb9b59a6dd30e96e93f5d8dd64417b60e4abc41ed3b4b5c"
     }
   },
   "schemaVersion": "3.4.16",
-  "updatedAt": "2024-11-11T21:48:08.248Z",
+  "updatedAt": "2024-11-11T23:46:22.020Z",
+  "networkType": "ethereum",
   "devdoc": {
     "methods": {}
   },
